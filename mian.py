@@ -1,7 +1,17 @@
-from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QLabel, QDialog, QMessageBox
+from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QLabel, QDialog, QMessageBox, QMainWindow
 import os, sys
 
 from GUI.ui_login import Ui_Dialog
+from GUI.ui_principal import Ui_MainWindow
+
+
+class tela_principal(QMainWindow):
+    def __init__(self, *args, **kwargsargs):
+        super(tela_principal, self).__init__(*args, **kwargsargs)
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+
+
 
 class simpleApp(QDialog):
     def __init__(self, *args, **kwargsargs):
@@ -13,7 +23,9 @@ class simpleApp(QDialog):
 
 
     def janela_principal(self):
-        QMessageBox.information(QMessageBox(), "Mensagem", "Conexão ativa")
+        self.window = tela_principal()
+        self.window.show()
+        # QMessageBox.information(QMessageBox(), "Mensagem", "Conexão ativa")
 
     def close_login_window(self):
         """Fecha a janela de login."""

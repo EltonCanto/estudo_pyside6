@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+from PySide6 import QtWidgets
 ################################################################################
 ## Form generated from reading UI file 'principalHqxtgz.ui'
 ##
@@ -132,4 +132,5 @@ class Ui_MainWindow(object):
         self.menuEditar.setTitle(QCoreApplication.translate("MainWindow", u"Editar", None))
         self.toolBar.setWindowTitle(QCoreApplication.translate("MainWindow", u"toolBar", None))
     # retranslateUi
+
 
